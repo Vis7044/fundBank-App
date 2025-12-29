@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @import "tailwindcss";
 
 /* =======================
@@ -31,7 +31,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mulish: "Mulish", sans-serif;
 }
 
 /* Dark mode */
@@ -54,7 +53,6 @@
 
   body {
     color: var(--foreground);
-    font-family: "Mulish", Arial, Helvetica, sans-serif;
   }
 
   input {
