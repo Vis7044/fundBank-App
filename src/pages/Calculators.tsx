@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import type { FC } from "react";
 import { BarChart3, Scale } from "lucide-react";
-// import SPICalculator from "../components/calculators/SIPCalculator";
-// import SwpCalculator from "../components/calculators/SWPCalculator";
-// import LumpsumCalculator from "../components/calculators/LumpsumCalculator";
-// import RetirementCalculator from "../components/calculators/RetirementCalculator";
-// import SIPNeedCalculator from "../components/calculators/SIPNeedCalculator";
-// import EmiVsSipCalculator from "../components/calculators/EmiVsSipCalculator";
-// import ChildEducationCalculator from "../components/calculators/ChildEducationCalculator";
-// import ChildMarraigeCalculator from "../components/calculators/ChildMarraigeCalculator";
-// import SIPCalculator from "../components/calculators/SIPCalculator";
-// import CapitalGainCalculator from "../components/calculators/CapitalGainCalculator";
+import SPICalculator from "../components/calculators/SIPCalculator";
+import SwpCalculator from "../components/calculators/SWPCalculator";
+import LumpsumCalculator from "../components/calculators/LumpsumCalculator";
+import RetirementCalculator from "../components/calculators/RetirementCalculator";
+import SIPNeedCalculator from "../components/calculators/SIPNeedCalculator";
+import EmiVsSipCalculator from "../components/calculators/EmiVsSipCalculator";
+import ChildEducationCalculator from "../components/calculators/ChildEducationCalculator";
+import ChildMarraigeCalculator from "../components/calculators/ChildMarraigeCalculator";
+import SIPCalculator from "../components/calculators/SIPCalculator";
+import CapitalGainCalculator from "../components/calculators/CapitalGainCalculator";
 
 const tabs: string[] = [
   "Mutual Funds SIP",
@@ -25,30 +25,30 @@ const tabs: string[] = [
 ];
 
 // --- Content Switcher ---
-// const CalculatorContent: FC<{ selectedTab: string }> = ({ selectedTab }) => {
-//   switch (selectedTab) {
-//     case "Mutual Funds SIP":
-//       return <SPICalculator />;
-//     case "⁠SWP Calculator":
-//       return <SwpCalculator />;
-//     case "Lumpsum Calculator":
-//       return <LumpsumCalculator />;
-//     case "Retirement Calculator":
-//       return <RetirementCalculator />
-//     case "SIP Need Calculator":
-//       return <SIPNeedCalculator />;
-//     case "EMI vs SIP Calculator":
-//       return <EmiVsSipCalculator />;
-//     case "⁠Children Education":
-//       return <ChildEducationCalculator />;
-//     case "Child Marriage Calculator":
-//       return <ChildMarraigeCalculator />;
-//     case "⁠Capital Gain Calculator":
-//       return <CapitalGainCalculator />;
-//     default:
-//       return <SIPCalculator />;
-//   }
-// };
+const CalculatorContent: FC<{ selectedTab: string }> = ({ selectedTab }) => {
+  switch (selectedTab) {
+    case "Mutual Funds SIP":
+      return <SPICalculator />;
+    case "⁠SWP Calculator":
+      return <SwpCalculator />;
+    case "Lumpsum Calculator":
+      return <LumpsumCalculator />;
+    case "Retirement Calculator":
+      return <RetirementCalculator />
+    case "SIP Need Calculator":
+      return <SIPNeedCalculator />;
+    case "EMI vs SIP Calculator":
+      return <EmiVsSipCalculator />;
+    case "⁠Children Education":
+      return <ChildEducationCalculator />;
+    case "Child Marriage Calculator":
+      return <ChildMarraigeCalculator />;
+    case "⁠Capital Gain Calculator":
+      return <CapitalGainCalculator />;
+    default:
+      return <SIPCalculator />;
+  }
+};
 
 const Calculators: FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Mutual Funds SIP");
