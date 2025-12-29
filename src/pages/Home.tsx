@@ -1,4 +1,4 @@
-import FeatureTreeTimeline from "../components/FeatureTreeTimeLine";
+import FeatureTreeTimeline from "../components/FeatureTreeTimeline";
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
 import TopFundsByCategory from "../components/TopFundsByCategory";

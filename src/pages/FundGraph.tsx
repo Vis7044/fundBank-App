@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import fundService from "../services/fundService";
 import IntradayChart from "../components/IntradayEChart";
-
+import ReturnCalculator from "../components/calculators/ReturnCalculator";
 
 const ranges = [
   { label: "1M", days: 30 },
@@ -37,7 +37,9 @@ export default function FundGraph() {
   const [schemeName, setSchemeName] = useState("");
   const [fundMeta, setFundMeta] = useState<FundMeta | null>(null);
   const [expectedCagr, setExpectedCagr] = useState<number | null>(null);
-  const [returnsByRange, setReturnsByRange] = useState<Record<string, number | null>>({});
+  const [returnsByRange, setReturnsByRange] = useState<
+    Record<string, number | null>
+  >({});
   const [schemeImage, setSchemeImage] = useState("");
 
   const calculateReturn = (data: any[]) => {
@@ -169,7 +171,10 @@ export default function FundGraph() {
 
         {/* RIGHT */}
         <div className="lg:col-span-1">
-
+          <ReturnCalculator
+            nav={latestNav ?? 10}
+            expectedCagr={expectedCagr ?? 0}
+          />
         </div>
 
         {/* EXPLORE MORE SECTION */}
