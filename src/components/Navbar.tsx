@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useState } from "react";
-import { useTheme } from "./utils/ThemeProvider";
+import { useTheme } from "../utils/ThemeProvider";
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
